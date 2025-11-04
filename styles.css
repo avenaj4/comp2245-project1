@@ -1,7 +1,8 @@
-/* Add your CSS to this file */
+/* ===== Base Styles ===== */
 body {
   margin: 0;
   font-size: 16px;
+  font-family: system-ui, sans-serif;
 }
 
 .container {
@@ -10,17 +11,21 @@ body {
   width: 100%;
 }
 
+/* ===== General Section Spacing ===== */
 section {
   margin-bottom: 2rem;
   padding: 0 2rem;
   box-sizing: border-box;
 }
 
+/* ===== Header ===== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
+  background-color: white;
+  font-size: 18px;
 }
 
 header h1 {
@@ -37,13 +42,21 @@ header nav ul {
 
 header nav a {
   text-decoration: none;
+  color: #6b7280;
+  transition: color 0.3s ease;
 }
 
+header nav a:hover {
+  color: #5A67D8;
+}
+
+/* ===== Hero / Overview Section ===== */
 .hero {
   display: flex;
   gap: 2rem;
   align-items: center;
   padding: 2rem 2rem;
+  background-color: #E2E8F0;
 }
 
 .hero img {
@@ -55,8 +68,14 @@ header nav a {
   flex: 1;
 }
 
+/* ===== Learn About Section ===== */
 .learn-about {
   padding: 2rem 2rem;
+}
+
+.learn-about h2 {
+  font-size: 24px;
+  color: #48BB78;
 }
 
 .learn-about .cards {
@@ -68,15 +87,26 @@ header nav a {
 .learn-about .card {
   background: #fff;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
+
+.learn-about .card h3 {
+  color: #48BB78;
+  font-size: 21px;
+}
+
+/* ===== COVID-19 Testing Section ===== */
 .covid-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
   padding: 2rem 2rem;
+  background-color: #4A5568;
+  color: white;
 }
 
 .covid-section .text {
@@ -86,10 +116,16 @@ header nav a {
 .covid-section .button,
 .covid-section a.button,
 .covid-section button {
-  margin-left: auto;
+  background-color: #48BB78;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-
+/* ===== Recent Stories Section ===== */
 .recent-stories {
   display: flex;
   gap: 2rem;
@@ -97,33 +133,64 @@ header nav a {
   padding: 2rem 2rem;
 }
 
+.recent-stories h2,
+.recent-stories a {
+  color: #5A67D8;
+}
+
+.recent-stories h3 {
+  font-size: 18px;
+}
+
 .recent-stories img {
   max-width: 30%;
   height: auto;
+  border-radius: 50%; /* make images circular */
 }
 
 .recent-stories .story-content {
   flex: 1;
 }
 
-
+/* ===== Newsletter Section ===== */
 .newsletter {
   text-align: center;
   padding: 2rem 2rem;
+  background-color: #48BB78;
+  color: white;
 }
+
 .newsletter form {
   display: inline-flex;
   gap: 0.5rem;
   margin-top: 1rem;
 }
+
 .newsletter input[type="email"],
 .newsletter input[type="text"] {
   padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 5px;
 }
+
 .newsletter button {
   padding: 0.5rem 1rem;
   cursor: pointer;
+  background-color: #5A67D8;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
+
+/* ===== Footer ===== */
+footer {
+  background-color: #4A5568;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* ===== Global Image Styling ===== */
 img {
   max-width: 100%;
   height: auto;
